@@ -11,7 +11,6 @@ class Game
 
   def play_game
   end
-
 end
 
 g = Game.new
