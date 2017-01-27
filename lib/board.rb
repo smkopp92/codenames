@@ -3,6 +3,8 @@ require_relative "space"
 require "pry"
 
 class Board
+  attr_reader :board
+
   def initialize
     generate_board
     assign_colors
