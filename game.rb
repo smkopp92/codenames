@@ -15,3 +15,4 @@ end
 
 g = Game.new
 puts g.board.print_board
+puts g.board.print_board(reveal = true)

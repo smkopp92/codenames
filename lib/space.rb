@@ -7,11 +7,11 @@ class Space
   def initialize(word)
     @word = word
     @color = nil
-    @selected = true
+    @selected = false
   end
 
-  def output
-    if selected
+  def output(reveal = false)
+    if selected || reveal
       if color == "Red"
         word.red
       elsif color == "Blue"

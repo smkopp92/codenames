@@ -8,13 +8,13 @@ class Board
     assign_colors
   end
 
-  def print_board
+  def print_board(reveal = false)
     output = "Red Team Word | ".red + "Blue Team Word | ".blue + "Assassin Word | ".green + "Neutral Word | ".yellow + "Unpicked Word"
     output += "\n " + "-" * (max_length * 5 + 14) + "\n|"
     @board.each_with_index do |row, index|
       row.each_with_index do |space, index|
         space_count = (max_length - space.word.length + 2)/2.0
-        output += " " * space_count + space.output + " " * space_count.round + "|"
+        output += " " * space_count + space.output(reveal) + " " * space_count.round + "|"
         if index == row.length - 1
           output += "\n"
         end
